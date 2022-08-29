@@ -1,0 +1,22 @@
+[Unit]
+Description=Coughingcatcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=coughingcatcoin
+Group=coughingcatcoin
+
+Type=forking
+PIDFile=/var/lib/coughingcatcoind/coughingcatcoind.pid
+ExecStart=/usr/bin/coughingcatcoind -daemon -pid=/var/lib/coughingcatcoind/coughingcatcoind.pid \
+-conf=/etc/coughingcatcoin/coughingcatcoin.conf -datadir=/var/lib/coughingcatcoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

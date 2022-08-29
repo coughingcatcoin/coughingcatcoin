@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Coughingcatcoin Core
+Comment=Connect to the Coughingcatcoin P2P Network
+Comment[de]=Verbinde mit dem Coughingcatcoin peer-to-peer Netzwerk
+Comment[fr]=Coughingcatcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Coughingcatcoin, eşten eşe kriptografik sanal para birimi
+Exec=coughingcatcoin-qt %u
+Terminal=false
+Type=Application
+Icon=coughingcatcoin128
+MimeType=x-scheme-handler/coughingcatcoin;
+Categories=Office;Finance;

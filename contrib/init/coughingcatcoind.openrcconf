@@ -1,0 +1,33 @@
+# /etc/conf.d/coughingcatcoind: config file for /etc/init.d/coughingcatcoind
+
+# Config file location
+#COUGHINGCATCOIND_CONFIGFILE="/etc/coughingcatcoin/coughingcatcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $COUGHINGCATCOIND_USER)
+#COUGHINGCATCOIND_PIDDIR="/var/run/coughingcatcoind"
+
+# What filename to give the pidfile
+#COUGHINGCATCOIND_PIDFILE="${COUGHINGCATCOIND_PIDDIR}/coughingcatcoind.pid"
+
+# Where to write coughingcatcoind data (be mindful that the blockchain is large)
+#COUGHINGCATCOIND_DATADIR="/var/lib/coughingcatcoind"
+
+# User and group to own coughingcatcoind process
+#COUGHINGCATCOIND_USER="coughingcatcoin"
+#COUGHINGCATCOIND_GROUP="coughingcatcoin"
+
+# Path to coughingcatcoind executable
+#COUGHINGCATCOIND_BIN="/usr/bin/coughingcatcoind"
+
+# Nice value to run coughingcatcoind under
+#COUGHINGCATCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+COUGHINGCATCOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for coughingcatcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+COUGHINGCATCOIND_SIGTERM_TIMEOUT=60
